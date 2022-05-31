@@ -473,32 +473,8 @@ bot.command("start", function (msg, reply, next) {
 });
 
 bot.command("help", function (msg, reply, next) {
-  reply.html(
-    "Use /run &lt;command&gt; and I'll execute it for you. While it's running, you can:\n" +
-    "\n" +
-    "‣ Reply to one of my messages to send input to the command, or use /enter.\n" +
-    "‣ Use /end to send an EOF (Ctrl+D) to the command.\n" +
-    "‣ Use /cancel to send SIGINT (Ctrl+C) to the process group, or the signal you choose.\n" +
-    "‣ Use /kill to send SIGTERM to the root process, or the signal you choose.\n" + 
-    "‣ For graphical applications, use /redraw to force a repaint of the screen.\n" +
-    "‣ Use /type or /control to press keys, /meta to send the next key with Alt, or /keypad to show a keyboard for special keys.\n" + 
-    "\n" +
-    "You can see the current status and settings for this chat with /status. Use /env to " +
-    "manipulate the environment, /cd to change the current directory, /shell to see or " +
-    "change the shell used to run commands and /resize to change the size of the terminal.\n" +
-    "\n" +
-    "By default, output messages are sent silently (without sound) and links are not expanded. " +
-    "This can be changed through /setsilent and /setlinkpreviews. Note: links are " +
-    "never expanded in status lines.\n" +
-    "\n" +
-    "<em>Additional features</em>\n" +
-    "\n" +
-    "Use /upload &lt;file&gt; and I'll send that file to you. If you reply to that " +
-    "message by uploading me a file, I'll overwrite it with yours.\n" +
-    "\n" +
-    "You can also use /file &lt;file&gt; to display the contents of file as a text " +
-    "message. This also allows you to edit the file, but you have to know how..."
-  );
+ // reply.html()
+    reply.html("<a href='#'>Help</a>")
 });
 
 // FIXME: add inline bot capabilities!
